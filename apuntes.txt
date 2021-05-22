@@ -512,3 +512,50 @@ dotenv-webpack ⇒ Leera el archivo .env por defecto y lo agregar a nuestro proy
 Para usarlas debes hacer lo siguiente
 const nombre = process.env.NOMBRE_VARIABLE;
 Toda la configuración se podrá acceder desde process.env
+
+***Webpack en modo desarrollo
+Creamos un nuevo archivo:
+webpack.config.dev.js
+Copiamos todo lo de webpack.config.js a el archivo que acabamos de crear.
+Borramos o comentamos el siguiente código, ya que no necesitamos optimizar para el modo de desarrollo (Queremos ver cuando funcionan las cosas).
+    optimization: {
+        minimize: true,
+        minimizer: [
+            new CssMinimizerPlugin(),
+            new TerserPlugin()
+        ]
+    }
+También borramos o comentamos por la misma razón:
+
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin')
+Seguido del atributo output añadimos:
+output: {
+},
+mode: 'development',
+En package.json:
+"dev": "webpack --config webpack.config.dev.js" 
+y ejecutamos npm run dev
+
+*** Webpack en modo producción
+<h4>Apuntes</h4>
+Actualmente tenemos el problema de tener varios archivos repetidos los cuales se fueron acumulando por compilaciones anteriores
+Para ello puedes limpiar la carpeta cada vez que hacemos un build, usando clean-webpack-plugin
+Cabe recalcar que esta característica es mucho más util para la configuración de producción
+Para instalarlo debes correr el siguiente comando:
+NPM
+
+npm install -D clean-webpack-plugin
+YARN
+
+yarn add -D clean-webpack-plugin
+Para agregarlo a nuestra configuración de webpack agregamos los siguientes cambios a webpack.config.js
+...
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+module.exports = {
+	...
+	plugins: [
+		...
+		new CleanWebpackPlugin()
+	]
+}

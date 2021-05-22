@@ -1,8 +1,32 @@
 {
-  "name": "js-portfolio-practica",
+  "name": "js-portfolio",
   "version": "1.0.0",
-  "description": "A minimal portfolio with Vanilla JavaScript",
+  "description": "practica curso webpack",
   "main": "index.js",
+  "dependencies": {
+    "-": "^0.0.1",
+    "D": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "css-loader": "^5.2.5",
+    "css-minimizer-webpack-plugin": "^3.0.0",
+    "dotenv-webpack": "^7.0.2",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.1",
+    "mini-css-extract-plugin": "^1.6.0",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^6.0.0",
+    "terser-webpack-plugin": "^5.1.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --config webpack.config.js",
@@ -14,38 +38,12 @@
     "url": "git+https://github.com/mgas90/curso-webpack.git"
   },
   "keywords": [
-    "javascript",
-    "html",
-    "css"
+    "webpack"
   ],
-  "author": "gabriela acosta curso-platzi",
+  "author": "Gabriela Acosta",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mgas90/curso-webpack.git/issues"
+    "url": "https://github.com/mgas90/curso-webpack/issues"
   },
-  "homepage": "https://github.com/mgas90/curso-webpack.git#readme",
-  "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/plugin-transform-runtime": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "babel-loader": "^8.2.2",
-    "clean-webpack-plugin": "^4.0.0-alpha.0",
-    "copy-webpack-plugin": "^8.1.1",
-    "css-loader": "^5.2.4",
-    "css-minimizer-webpack-plugin": "^3.0.0",
-    "dotenv-webpack": "^7.0.2",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.3.1",
-    "mini-css-extract-plugin": "^1.6.0",
-    "stylus": "^0.54.8",
-    "stylus-loader": "^6.0.0",
-    "terser-webpack-plugin": "^5.1.2",
-    "url-loader": "^4.1.1",
-    "webpack": "^5.37.0",
-    "webpack-cli": "^4.7.0"
-  },
-  "dependencies": {
-    "-": "0.0.1",
-    "D": "^1.0.0"
-  }
+  "homepage": "https://github.com/mgas90/curso-webpack#readme"
 }

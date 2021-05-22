@@ -16,7 +16,7 @@ const Template = async () => {
               <circle cx="50" cy="50" r="40" />
             </svg>
           </div>
-          <p class="card_title">Hi, My name is</p>
+          <p class="card_title">Olá meu nome é</p>
           <p class="card_value">${data.name.first} ${data.name.last}</p>
         </div>
         <div class="card_userdata">
@@ -26,13 +26,13 @@ const Template = async () => {
           </ul>
         </div>
         <div class="card_social">
-          <a href="https://twitter.com/gndx">
+          <a href="https://twitter.com/MaGaby_AS">
             <img src="${twitter}" />
           </a>
-          <a href="https://github.com/gndx">
+          <a href="https://github.com/mgas90">
             <img src="${github}" />
           </a>
-          <a href="https://instagram.com/gndx">
+          <a href="https://www.instagram.com/ma_gabyas">
             <img src="${instagram}" />
           </a>
         </div>
